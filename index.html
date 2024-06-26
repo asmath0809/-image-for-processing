@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR Image Processor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightblue; /* Light blue background */
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="file"] {
+            background-color: lavender; /* Lavender background for file input */
+            margin: 10px 0;
+        }
+        button {
+            margin: 10px 0;
+            background-color: green; /* Green background for upload button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Upload an image for OCR</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".png, .jpg, .jpeg">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

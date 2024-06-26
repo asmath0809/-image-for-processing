@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR Result</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            background-color: lightpink;
+        }
+        h1, h2 {
+            margin: 10px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>OCR Result and Word Frequency</h1>
+    <h2>Word Counts:</h2>
+    <ul>
+        {% for word, count in words.items() %}
+        <li>{{ word }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Top 10 Word Frequencies:</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Top 10 Word Frequencies">
+</body>
+</html>
